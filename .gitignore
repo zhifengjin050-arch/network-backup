@@ -1,0 +1,13 @@
+# Python 缓存
+__pycache__/
+*.pyc
+# 🔥 核心敏感配置 (绝对不能上传)
+devices.json
+
+# 备份数据文件
+backups/
+*.cfg
+
+# 日志与临时文件
+*.log
+.DS_Store

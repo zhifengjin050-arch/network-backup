@@ -1,0 +1,2 @@
+# 每周一晚上8点执行网络设备备份
+0 20 * * 1 /home/osadmin/network-backup/run_backup.sh
