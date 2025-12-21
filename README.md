@@ -6,7 +6,6 @@
 
 * [🚀 项目背景 (Background)](https://www.google.com/search?q=%23-%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF-background)  
 * [✨ 核心功能 (Features)](https://www.google.com/search?q=%23-%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD-features)  
-* [📸 项目展示 (Screenshots)](https://www.google.com/search?q=%23-%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA-screenshots)  
 * [🏗️ 系统架构 (Architecture)](https://www.google.com/search?q=%23-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84-architecture)  
 * [🛠 技术栈 (Tech Stack)](https://www.google.com/search?q=%23-%E6%8A%80%E6%9C%AF%E6%A0%88-tech-stack)  
 * [📋 环境准备 (Prerequisites)](https://www.google.com/search?q=%23-%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87-prerequisites)  
@@ -34,47 +33,11 @@
 * **🛡️ 广泛兼容**：完美支持华为（Huawei）交换机及防火墙（USG系列）。  
 * **🔧 智能交互**：针对老旧设备优化 SSH 算法，支持自动分页处理，增强抗超时能力。
 
-## **📸 项目展示 (Screenshots)**
-
-*以下为系统运行实景截图*
-
-### **1\. Web 管理界面**
-
-*直观的文件列表，支持按时间排序与下载*
-
-### **2\. 钉钉告警通知**
-
-*实时推送备份统计与失败详情，支持一键跳转*
-
-### **3\. 系统逻辑拓扑**
-
-*清晰的数据流向与架构设计*
-
-*(注：请在项目根目录下新建 images 文件夹并放入对应截图)*
-
 ## **🏗️ 系统架构 (Architecture)**
 
 系统采用典型的 C/S 架构，服务器端通过 SSH 轮询采集设备配置，并持久化存储到本地磁盘。
 
-graph TD  
-    subgraph "👤 管理层 (User Layer)"  
-        User\[运维管理员\] \--\>|HTTP 访问/下载| WebUI\[Web 管理界面 :5000\]  
-        User \--\>|SSH 维护| OS\[宿主机 Ubuntu\]  
-        DingTalk\[钉钉 App\]  
-    end
-
-    subgraph "🐳 核心服务层 (Docker Container)"  
-        Core\[Python 核心脚本\] \--\>|SSH 采集| Switch\[交换机/防火墙\]  
-        Core \--\>|Webhook 推送| DingTalk  
-        Core \--\>|保存文件| Storage\[持久化存储卷\]  
-        WebUI \-.-\>|读取文件| Storage  
-        Cron\[Crontab 调度器\] \--\>|定时触发| Core  
-    end
-
-    subgraph "🖧 基础设施 (Infrastructure)"  
-        OS \--\> DockerEngine\[Docker 引擎\]  
-        Switch \-- "配置数据流" \--\> Core  
-    end
+![网络朴拓](./images/topology.png)
 
 ## **🛠 技术栈 (Tech Stack)**
 
@@ -190,6 +153,8 @@ nano devices.json
 
 编辑脚本，配置钉钉 Token 和服务器 IP：
 
+vim  backup_network_devices.py
+
 \# 1\. 钉钉 Webhook  
 DINGTALK\_WEBHOOK \= "\[https://oapi.dingtalk.com/robot/send?access\_token=xxxx\](https://oapi.dingtalk.com/robot/send?access\_token=xxxx)"
 
@@ -229,6 +194,8 @@ sudo docker exec \-it net-backup python backup\_network\_devices.py
 ### **🌐 访问 Web 界面**
 
 打开浏览器访问：http://\<服务器IP\>:5000
+
+![web备份下载界面](./images/web_ui.png)
 
 ## **❓ 故障排查 (Troubleshooting)**
 
