@@ -218,6 +218,8 @@ sudo docker exec \-it net-backup python backup\_network\_devices.py
 
 **成功标志**：终端显示 "Backup successful"，钉钉群收到带链接的消息，点击链接能跳转。
 
+![钉钉通知信息截图](./images/dingtalk_msg.png)
+
 ### **⏰ 设置定时任务**
 
 编辑宿主机 Crontab (crontab \-e)，添加如下规则（每周五 17:30 执行）：
