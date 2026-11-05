@@ -1,18 +1,27 @@
+![网络配置备份与运维交付](docs/showcase/cover.svg)
+
+## ✨ 项目速览
+
+- 自动采集华为设备配置，集中保存备份文件，为人工巡检与配置留存提供自动化入口。
+- Web 页面支持按设备名与 IP 筛选备份，按时间查看并下载历史配置。
+- 将备份执行、文件浏览与钉钉通知串联，配套容器部署与定时任务说明。
+
+### 🧭 源码阅读路线
+
+- **[备份采集](backup_network_devices.py)**
+- **[文件管理](app.py)**
+- **[设备模板](devices.example.json)**
+- **[容器构建](Dockerfile)**
+
+### 🖼️ 项目界面
+
+![网络配置备份与运维交付界面](images/web_ui.png)
+
+---
+
 # **🛡️ 企业级网络设备自动化备份系统 (Enterprise Network Auto-Backup System)**
 
 **项目简介**：这是一个基于 Docker 容器化部署的自动化运维解决方案，专为企业内网环境设计。它能够定时自动抓取华为网络设备（交换机/防火墙）的配置文件，提供可视化的 Web 管理界面进行下载，并通过钉钉机器人实时推送备份报告。
-
-## **📖 目录 (Table of Contents)**
-
-* [🚀 项目背景 (Background)](https://www.google.com/search?q=%23-%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF-background)  
-* [✨ 核心功能 (Features)](https://www.google.com/search?q=%23-%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD-features)  
-* [🏗️ 系统架构 (Architecture)](https://www.google.com/search?q=%23-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84-architecture)  
-* [🛠 技术栈 (Tech Stack)](https://www.google.com/search?q=%23-%E6%8A%80%E6%9C%AF%E6%A0%88-tech-stack)  
-* [📋 环境准备 (Prerequisites)](https://www.google.com/search?q=%23-%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87-prerequisites)  
-* [⚡ 快速部署 (Deployment)](https://www.google.com/search?q=%23-%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2-deployment)  
-* [⚙️ 配置指南 (Configuration)](https://www.google.com/search?q=%23-%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97-configuration)  
-* [🕹️ 日常运维 (Operations)](https://www.google.com/search?q=%23-%E6%97%A5%E5%B8%B8%E8%BF%90%E7%BB%B4-operations)  
-* [❓ 故障排查 (Troubleshooting)](https://www.google.com/search?q=%23-%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5-troubleshooting)
 
 ## **🚀 项目背景 (Background)**
 
@@ -37,7 +46,7 @@
 
 系统采用典型的 C/S 架构，服务器端通过 SSH 轮询采集设备配置，并持久化存储到本地磁盘。
 
-![网络朴拓](./images/topology.png)
+![网络拓扑](./images/topology.png)
 
 ## **🛠 技术栈 (Tech Stack)**
 
