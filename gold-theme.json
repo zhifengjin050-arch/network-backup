@@ -1,0 +1,68 @@
+{
+  "title": "Network Backup",
+  "subtitle": "网络设备配置采集与备份交付",
+  "stack": "Python · Paramiko · Flask · Docker",
+  "repository": "zhifengjin050-arch/network-backup",
+  "sections": [
+    {
+      "id": "section-01",
+      "title": "工程导读 · 从场景到实现",
+      "caption": "01 / PROJECT DOCUMENTATION"
+    },
+    {
+      "id": "section-02",
+      "title": "项目速览",
+      "caption": "02 / PROJECT DOCUMENTATION"
+    },
+    {
+      "id": "section-03",
+      "title": "项目背景 (Background)",
+      "caption": "03 / PROJECT DOCUMENTATION"
+    },
+    {
+      "id": "section-04",
+      "title": "核心功能 (Features)",
+      "caption": "04 / PROJECT DOCUMENTATION"
+    },
+    {
+      "id": "section-05",
+      "title": "系统架构 (Architecture)",
+      "caption": "05 / PROJECT DOCUMENTATION"
+    },
+    {
+      "id": "section-06",
+      "title": "技术栈 (Tech Stack)",
+      "caption": "06 / PROJECT DOCUMENTATION"
+    },
+    {
+      "id": "section-07",
+      "title": "环境准备 (Prerequisites)",
+      "caption": "07 / PROJECT DOCUMENTATION"
+    },
+    {
+      "id": "section-08",
+      "title": "快速部署 (Deployment)",
+      "caption": "08 / PROJECT DOCUMENTATION"
+    },
+    {
+      "id": "section-09",
+      "title": "配置指南 (Configuration)",
+      "caption": "09 / PROJECT DOCUMENTATION"
+    },
+    {
+      "id": "section-10",
+      "title": "日常运维 (Operations)",
+      "caption": "10 / PROJECT DOCUMENTATION"
+    },
+    {
+      "id": "section-11",
+      "title": "故障排查 (Troubleshooting)",
+      "caption": "11 / PROJECT DOCUMENTATION"
+    },
+    {
+      "id": "section-12",
+      "title": "License",
+      "caption": "12 / PROJECT DOCUMENTATION"
+    }
+  ]
+}

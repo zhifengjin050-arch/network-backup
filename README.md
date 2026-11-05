@@ -1,7 +1,9 @@
-![网络配置备份与运维交付](docs/showcase/cover.svg)
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/showcase/hero-dark.svg"><source media="(prefers-color-scheme: light)" srcset="docs/showcase/hero-light.svg"><img src="docs/showcase/hero-light.svg" alt="Network Backup · 网络设备配置采集与备份交付" width="100%"></picture>
 
 <!-- engineering-guide:start -->
-## 🧭 工程导读 · 从场景到实现
+<a id="-工程导读--从场景到实现"></a>
+<h2><picture><source media="(prefers-color-scheme: dark)" srcset="docs/showcase/section-01-dark.svg"><source media="(prefers-color-scheme: light)" srcset="docs/showcase/section-01-light.svg"><img src="docs/showcase/section-01-light.svg" alt="工程导读 · 从场景到实现" width="100%"></picture></h2>
+
 
 **网络设备配置备份与结果可见性**。减少逐台登录华为网络设备导出配置的重复操作，将配置采集、文件留存、浏览下载与通知汇总连接起来。
 
@@ -24,7 +26,9 @@ flowchart LR
 
 
 
-## ✨ 项目速览
+<a id="-项目速览"></a>
+<h2><picture><source media="(prefers-color-scheme: dark)" srcset="docs/showcase/section-02-dark.svg"><source media="(prefers-color-scheme: light)" srcset="docs/showcase/section-02-light.svg"><img src="docs/showcase/section-02-light.svg" alt="项目速览" width="100%"></picture></h2>
+
 
 - 自动采集华为设备配置，集中保存备份文件，为人工巡检与配置留存提供自动化入口。
 - Web 页面支持按设备名与 IP 筛选备份，按时间查看并下载历史配置。
@@ -47,7 +51,9 @@ flowchart LR
 
 **项目简介**：这是一个基于 Docker 容器化部署的自动化运维解决方案，专为企业内网环境设计。它能够定时自动抓取华为网络设备（交换机/防火墙）的配置文件，提供可视化的 Web 管理界面进行下载，并通过钉钉机器人实时推送备份报告。
 
-## **🚀 项目背景 (Background)**
+<a id="-项目背景-background"></a>
+<h2><picture><source media="(prefers-color-scheme: dark)" srcset="docs/showcase/section-03-dark.svg"><source media="(prefers-color-scheme: light)" srcset="docs/showcase/section-03-light.svg"><img src="docs/showcase/section-03-light.svg" alt="项目背景 (Background)" width="100%"></picture></h2>
+
 
 在企业网络运维中，随着设备数量的增加，人工登录每一台交换机进行配置备份不仅效率低下，而且容易遗漏。为了解决这一痛点，保障网络配置数据的安全与可追溯性，开发了这套自动化备份系统。
 
@@ -57,7 +63,9 @@ flowchart LR
 * **管理混乱**：解决备份文件分散、版本管理混乱的问题。  
 * **缺乏监控**：实现备份结果的实时监控与告警，确保数据安全。
 
-## **✨ 核心功能 (Features)**
+<a id="-核心功能-features"></a>
+<h2><picture><source media="(prefers-color-scheme: dark)" srcset="docs/showcase/section-04-dark.svg"><source media="(prefers-color-scheme: light)" srcset="docs/showcase/section-04-light.svg"><img src="docs/showcase/section-04-light.svg" alt="核心功能 (Features)" width="100%"></picture></h2>
+
 
 * **⚡ 自动化备份**：支持 Crontab 定时任务，全自动执行，无需人工干预。  
 * **🐳 容器化部署**：基于 Docker，环境隔离，一键迁移，支持 X86 架构，部署极速。  
@@ -66,13 +74,17 @@ flowchart LR
 * **🛡️ 广泛兼容**：完美支持华为（Huawei）交换机及防火墙（USG系列）。  
 * **🔧 智能交互**：针对老旧设备优化 SSH 算法，支持自动分页处理，增强抗超时能力。
 
-## **🏗️ 系统架构 (Architecture)**
+<a id="-系统架构-architecture"></a>
+<h2><picture><source media="(prefers-color-scheme: dark)" srcset="docs/showcase/section-05-dark.svg"><source media="(prefers-color-scheme: light)" srcset="docs/showcase/section-05-light.svg"><img src="docs/showcase/section-05-light.svg" alt="系统架构 (Architecture)" width="100%"></picture></h2>
+
 
 系统采用典型的 C/S 架构，服务器端通过 SSH 轮询采集设备配置，并持久化存储到本地磁盘。
 
 ![网络拓扑](./images/topology.png)
 
-## **🛠 技术栈 (Tech Stack)**
+<a id="-技术栈-tech-stack"></a>
+<h2><picture><source media="(prefers-color-scheme: dark)" srcset="docs/showcase/section-06-dark.svg"><source media="(prefers-color-scheme: light)" srcset="docs/showcase/section-06-light.svg"><img src="docs/showcase/section-06-light.svg" alt="技术栈 (Tech Stack)" width="100%"></picture></h2>
+
 
 | 模块 | 技术选型 | 说明 |
 | :---- | :---- | :---- |
@@ -84,7 +96,9 @@ flowchart LR
 | **通知渠道** | Requests | 发送钉钉群机器人消息 |
 | **任务调度** | Linux Crontab | 负责周期性任务的触发 |
 
-## **📋 环境准备 (Prerequisites)**
+<a id="-环境准备-prerequisites"></a>
+<h2><picture><source media="(prefers-color-scheme: dark)" srcset="docs/showcase/section-07-dark.svg"><source media="(prefers-color-scheme: light)" srcset="docs/showcase/section-07-light.svg"><img src="docs/showcase/section-07-light.svg" alt="环境准备 (Prerequisites)" width="100%"></picture></h2>
+
 
 在开始部署前，请确保服务器满足以下要求：
 
@@ -123,7 +137,9 @@ network:
 
 应用配置：sudo chmod 600 /etc/netplan/01-network-manager-all.yaml && sudo netplan apply
 
-## **⚡ 快速部署 (Deployment)**
+<a id="-快速部署-deployment"></a>
+<h2><picture><source media="(prefers-color-scheme: dark)" srcset="docs/showcase/section-08-dark.svg"><source media="(prefers-color-scheme: light)" srcset="docs/showcase/section-08-light.svg"><img src="docs/showcase/section-08-light.svg" alt="快速部署 (Deployment)" width="100%"></picture></h2>
+
 
 ### **1\. 环境初始化**
 
@@ -159,7 +175,9 @@ systemctl restart docker
 git clone \[https://github.com/zhifengjin050-arch/network-backup.git\](https://github.com/zhifengjin050-arch/network-backup.git)  
 cd network-backup
 
-## **⚙️ 配置指南 (Configuration)**
+<a id="-配置指南-configuration"></a>
+<h2><picture><source media="(prefers-color-scheme: dark)" srcset="docs/showcase/section-09-dark.svg"><source media="(prefers-color-scheme: light)" srcset="docs/showcase/section-09-light.svg"><img src="docs/showcase/section-09-light.svg" alt="配置指南 (Configuration)" width="100%"></picture></h2>
+
 
 ### **1\. 配置设备清单 (devices.json)**
 
@@ -208,7 +226,9 @@ sudo docker run \-d \\
   \--name net-backup \\  
   network-backup
 
-## **🕹️ 日常运维 (Operations)**
+<a id="-日常运维-operations"></a>
+<h2><picture><source media="(prefers-color-scheme: dark)" srcset="docs/showcase/section-10-dark.svg"><source media="(prefers-color-scheme: light)" srcset="docs/showcase/section-10-light.svg"><img src="docs/showcase/section-10-light.svg" alt="日常运维 (Operations)" width="100%"></picture></h2>
+
 
 ### **🟢 手动触发备份**
 
@@ -230,7 +250,9 @@ sudo docker exec \-it net-backup python backup\_network\_devices.py
 
 ![web备份下载界面](./images/web_ui.png)
 
-## **❓ 故障排查 (Troubleshooting)**
+<a id="-故障排查-troubleshooting"></a>
+<h2><picture><source media="(prefers-color-scheme: dark)" srcset="docs/showcase/section-11-dark.svg"><source media="(prefers-color-scheme: light)" srcset="docs/showcase/section-11-light.svg"><img src="docs/showcase/section-11-light.svg" alt="故障排查 (Troubleshooting)" width="100%"></picture></h2>
+
 
 | 问题现象 | 可能原因 | 解决方案 |
 | :---- | :---- | :---- |
@@ -239,6 +261,8 @@ sudo docker exec \-it net-backup python backup\_network\_devices.py
 | **交换机报错 Connection refused** | 目标未开 SSH | 登录交换机 Web 后台，开启 Stelnet (SSH) 并允许 Port 22 |
 | **报错 Error reading SSH banner** | 设备响应过慢 | 最新版代码已将 timeout 调整为 60s 以适配老旧设备 |
 
-## **📜 License**
+<a id="-license"></a>
+<h2><picture><source media="(prefers-color-scheme: dark)" srcset="docs/showcase/section-12-dark.svg"><source media="(prefers-color-scheme: light)" srcset="docs/showcase/section-12-light.svg"><img src="docs/showcase/section-12-light.svg" alt="License" width="100%"></picture></h2>
+
 
 MIT License © 2025 Zhifeng Jin
