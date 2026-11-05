@@ -7,62 +7,74 @@
     {
       "id": "section-01",
       "title": "工程导读 · 从场景到实现",
-      "caption": "01 / PROJECT DOCUMENTATION"
+      "caption": "01 / PROJECT DOCUMENTATION",
+      "icon": "guide"
     },
     {
       "id": "section-02",
       "title": "项目速览",
-      "caption": "02 / PROJECT DOCUMENTATION"
+      "caption": "02 / PROJECT DOCUMENTATION",
+      "icon": "features"
     },
     {
       "id": "section-03",
       "title": "项目背景 (Background)",
-      "caption": "03 / PROJECT DOCUMENTATION"
+      "caption": "03 / PROJECT DOCUMENTATION",
+      "icon": "guide"
     },
     {
       "id": "section-04",
       "title": "核心功能 (Features)",
-      "caption": "04 / PROJECT DOCUMENTATION"
+      "caption": "04 / PROJECT DOCUMENTATION",
+      "icon": "features"
     },
     {
       "id": "section-05",
       "title": "系统架构 (Architecture)",
-      "caption": "05 / PROJECT DOCUMENTATION"
+      "caption": "05 / PROJECT DOCUMENTATION",
+      "icon": "architecture"
     },
     {
       "id": "section-06",
       "title": "技术栈 (Tech Stack)",
-      "caption": "06 / PROJECT DOCUMENTATION"
+      "caption": "06 / PROJECT DOCUMENTATION",
+      "icon": "stack"
     },
     {
       "id": "section-07",
       "title": "环境准备 (Prerequisites)",
-      "caption": "07 / PROJECT DOCUMENTATION"
+      "caption": "07 / PROJECT DOCUMENTATION",
+      "icon": "guide"
     },
     {
       "id": "section-08",
       "title": "快速部署 (Deployment)",
-      "caption": "08 / PROJECT DOCUMENTATION"
+      "caption": "08 / PROJECT DOCUMENTATION",
+      "icon": "deploy"
     },
     {
       "id": "section-09",
       "title": "配置指南 (Configuration)",
-      "caption": "09 / PROJECT DOCUMENTATION"
+      "caption": "09 / PROJECT DOCUMENTATION",
+      "icon": "config"
     },
     {
       "id": "section-10",
       "title": "日常运维 (Operations)",
-      "caption": "10 / PROJECT DOCUMENTATION"
+      "caption": "10 / PROJECT DOCUMENTATION",
+      "icon": "operations"
     },
     {
       "id": "section-11",
       "title": "故障排查 (Troubleshooting)",
-      "caption": "11 / PROJECT DOCUMENTATION"
+      "caption": "11 / PROJECT DOCUMENTATION",
+      "icon": "question"
     },
     {
       "id": "section-12",
       "title": "License",
-      "caption": "12 / PROJECT DOCUMENTATION"
+      "caption": "12 / PROJECT DOCUMENTATION",
+      "icon": "license"
     }
   ]
 }
