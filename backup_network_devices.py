@@ -22,8 +22,7 @@ logging.basicConfig(
 # ==========================================
 
 # 1. 钉钉 Webhook 地址
-DINGTALK_WEBHOOK = "https://oapi.dingtalk.com/robot/send?access_token=0d41fa2f2d34bf283c8d185a554f9ef51d4fa035291a1e0fd657b4b38bbca638"
-
+DINGTALK_WEBHOOK = os.getenv("DINGTALK_WEBHOOK_URL", "").strip()
 # 2. 你的服务器 IP 地址
 SERVER_IP = "192.172.77.3"
 SERVER_PORT = "5000"
