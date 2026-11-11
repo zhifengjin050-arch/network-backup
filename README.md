@@ -1,5 +1,18 @@
 <picture><source media="(prefers-color-scheme: dark)" srcset="docs/showcase/hero-dark.svg"><source media="(prefers-color-scheme: light)" srcset="docs/showcase/hero-light.svg"><img src="docs/showcase/hero-light.svg" alt="Network Backup · 网络设备配置采集与备份交付" width="100%"></picture>
 
+
+
+## 🔐 钉钉 Webhook 安全配置
+
+**不要把钉钉机器人 access_token 写入源码或提交到 Git。**
+仓库已改为从环境变量 `DINGTALK_WEBHOOK_URL` 读取完整 Webhook URL；未设置时自动跳过钉钉通知，不影响设备备份。
+
+- Linux/macOS：`export DINGTALK_WEBHOOK_URL='https://oapi.dingtalk.com/robot/send?access_token=<NEW_TOKEN>'`
+- PowerShell：`$env:DINGTALK_WEBHOOK_URL='https://oapi.dingtalk.com/robot/send?access_token=<NEW_TOKEN>'`
+- Docker：通过运行参数 `--env-file .env` 注入，而不是写入 Dockerfile 或公开的 Compose 配置。仅在私有 `.env` 内设置 `DINGTALK_WEBHOOK_URL=...`。
+
+**重要：** 如果旧机器人 Token 曾提交到公共仓库，请立即在钉钉端撤销或重新生成旧 Token。只修改当前代码无法删除 Git 历史中的凭据，旧 Token 在撤销前仍可能被滥用。
+
 <!-- engineering-guide:start -->
 <a id="-工程导读--从场景到实现"></a>
 <h2><picture><source media="(prefers-color-scheme: dark)" srcset="docs/showcase/section-01-dark.svg"><source media="(prefers-color-scheme: light)" srcset="docs/showcase/section-01-light.svg"><img src="docs/showcase/section-01-light.svg" alt="工程导读 · 从场景到实现" width="100%"></picture></h2>
